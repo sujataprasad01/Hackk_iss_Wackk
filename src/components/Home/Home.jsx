@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Navbar from '../Navbar/Navbar'
+import styles from "../Home/Home.module.css"
 function Home(props) {
   return (
-    <div>
-        <div>
+    <>
+    <div className={styles.container}>
+        <div >
             <h1>
-                <Link to='/login'>Login</Link>
+                <Link to='/login' className={styles.inner}>Login</Link>
             </h1>
             <br/>
             <h1>
-                <Link to='/singup'>Signup</Link>
+                <Link to='/signup' className={styles.inner}>Signup</Link>
             </h1>
         </div>
 
@@ -18,8 +20,9 @@ function Home(props) {
         <br/>
         <br/>
 
-<h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2>
-    </div>
+{/* <h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2> */}
+</div>
+    </>
   )
 }
 

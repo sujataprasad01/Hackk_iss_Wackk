@@ -1,0 +1,52 @@
+/* StudentDashboard.css */
+
+/* Style for the container */
+.dashboardcontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for course list */
+  .courselist {
+    display: flex; /* Display courses in a row */
+    flex-wrap: wrap; /* Allow courses to wrap to the next line */
+    justify-content: space-between; /* Distribute space between courses */
+    margin-top: 20px; /* Add margin at the top */
+  }
+  
+  /* Style for course card */
+  .coursecard {
+    width: calc(33.33% - 20px); /* Set width for each course card */
+    margin-bottom: 20px; /* Add margin between cards */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for course title */
+  .course-card h3 {
+    margin-top: 0;
+  }
+  
+  /* Style for course description */
+  .course-card p {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for button */
+  .course-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Hover style for button */
+  .course-card button:hover {
+    background-color: #0056b3;
+  }

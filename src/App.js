@@ -5,6 +5,11 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import { useEffect, useState } from 'react';
 import { auth } from './firebase';
+import Student from './components/Student';
+import Navbar from './components/Navbar/Navbar';
+import StudentDashboard from './components/Dashboard/StudentDashboard';
+import About from './components/About/About';
+import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 function App() {
 
 
@@ -20,10 +25,15 @@ function App() {
   return (
     <div className="App">
      <Router>
+      <Navbar></Navbar>
       <Routes>
         <Route path='/login' element={<Login></Login>} />
         <Route path='/signup' element={<Signup></Signup>} />
         <Route path='/' element={<Home name={userName}></Home>} />
+        <Route path='/explore' element={<Student></Student>}/>
+        <Route path='/student' element={<StudentDashboard></StudentDashboard>}/>
+        <Route path='/about' element={<About></About>}/>
+        <Route path='/admin' element={<AdminDashboard></AdminDashboard>}/>
       </Routes>
      </Router>
     </div>
