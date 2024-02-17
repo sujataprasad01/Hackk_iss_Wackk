@@ -1,19 +1,23 @@
 .container{
     justify-content: center;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     background: url("../Assets/study_learn.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
-    background-position: 30%;
+    height: 100vh;
+
+    background-position: center;
  
 }
 .container img{
     width: 10rem;
     height: 10rem;
 }
+.innerdiv{
+    padding-top: 3rem;
+    margin-top: 4rem;
+}
 .inner{
-  
     color: white;
     background-color: rgb(164, 71, 210);
     border-radius: 8px;

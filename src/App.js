@@ -10,6 +10,8 @@ import Navbar from './components/Navbar/Navbar';
 import StudentDashboard from './components/Dashboard/StudentDashboard';
 import About from './components/About/About';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import AddCoursePage from './components/Manage/ManageCourses';
+import ContactPage from './components/Contact/Contact';
 function App() {
 
 
@@ -34,6 +36,8 @@ function App() {
         <Route path='/student' element={<StudentDashboard></StudentDashboard>}/>
         <Route path='/about' element={<About></About>}/>
         <Route path='/admin' element={<AdminDashboard></AdminDashboard>}/>
+        <Route path='/manage' element={<AddCoursePage></AddCoursePage>}/>
+        <Route path='/contact' element={<ContactPage></ContactPage>}/>
       </Routes>
      </Router>
     </div>

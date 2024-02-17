@@ -16,7 +16,7 @@ const StudentDashboard = () => {
   return (
     <div className={styles.dashboardcontainer}>
       <h2>Welcome to Student Dashboard</h2>
-      <h3> Purchased Courses </h3>
+      <h3 ><b> Purchased Courses </b></h3>
       <div className={styles.courselist}>
         {courses.map(course => (
           <div key={course.id} className={styles.coursecard}>

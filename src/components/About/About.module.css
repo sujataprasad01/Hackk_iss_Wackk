@@ -1,35 +1,34 @@
 /* About.css */
 
-.aboutcontainer {
-    margin-top: 20rem;
+.about-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  .aboutheading {
+  .about-heading {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .aboutcontent {
+  .about-content {
     font-size: 16px;
     line-height: 1.5;
   }
   
-  .aboutlist {
+  .about-list {
     margin-top: 10px;
   }
   
-  .aboutlistitem {
+  .about-list-item {
     list-style-type: disc;
     margin-left: 20px;
   }
   
-  .aboutlistitem:firstchild {
+  .about-list-item:first-child {
     margin-top: 10px;
   }
   
-  .aboutmission {
+  .about-mission {
     margin-top: 20px;
   }

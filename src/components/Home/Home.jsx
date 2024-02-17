@@ -6,7 +6,7 @@ function Home(props) {
   return (
     <>
     <div className={styles.container}>
-        <div >
+        <div className={styles.innerdiv}>
             <h1>
                 <Link to='/login' className={styles.inner}>Login</Link>
             </h1>
