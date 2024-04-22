@@ -1,32 +1,9 @@
-/* body{
-    background-color: antiquewhite;
-    display: flex;
-    justify-content: center;
-}
-.container{
-    border-radius: 15px;
-    width: 30rem;
-    height: 20rem;
-   font-size: 1.5rem;
-    background-color: brown;
-
-    justify-content: center;
-    &h1{
-        color: white;
-    }
-}
-input::placeholder,
-textarea::placeholder {
-    font-size: 1rem;   
-}
- */
-
 
 .container {
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #9900ff, #cc80ff);
+    background-color: #0460b6f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +41,7 @@ textarea::placeholder {
   .footer button {
     outline: none;
     border: none;
-    background-color: #9900ff;
+    background-color: #0460b6f0;
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
@@ -81,7 +58,7 @@ textarea::placeholder {
   }
   
   .footer button:hover {
-    background-color: #aa2aff;
+    background-color: #0460b6f0;
   }
   
   .footer p {
@@ -91,7 +68,7 @@ textarea::placeholder {
   
   .footer p span a {
     font-weight: bold;
-    color: #9900ff;
+    color:  #0460b6f0;
     letter-spacing: 1px;
     font-size: 1rem;
     text-decoration: none;
@@ -99,3 +76,12 @@ textarea::placeholder {
 
 
 
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 20px;
+  
+    }
+    .innerBox {
+      min-width: 300px;
+    }
+  }

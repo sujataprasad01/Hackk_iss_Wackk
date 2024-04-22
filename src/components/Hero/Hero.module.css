@@ -1,0 +1,145 @@
+.maincon{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+.profile{
+    width: 30vw;
+    height: 70vh;
+    background-color: rgb(134, 206, 236);
+border-radius: 10px;
+    & h3 , h4{
+        margin-bottom: 30px;
+    }
+}
+.logo{
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin:2rem 2rem 1rem 2rem;
+    width: 50%;
+    height: 30%;
+}
+.write{
+    width: 5vw;
+    height: 5vh;
+    margin-left:3.6rem;
+    margin-bottom: 1rem;
+
+    & a{
+      text-decoration: none;
+      color: black;
+    }
+}
+.heading{
+    background-color: rgb(134, 206, 236);
+/* width: 70vw; */
+margin:0 2rem;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+display: flex;
+height: 18vh;
+padding: 0 1rem;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+}
+.cat{
+    display: flex;
+    flex-direction: row;
+margin:1rem 1rem;
+}
+.listcat{
+    display: flex;
+    flex-direction: column;
+}
+.innerlist{
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    margin: 1rem;
+    background-color: rgb(134, 206, 236);
+    border-radius: 10px;
+height: 21.5vh;
+width: 20vw;
+
+& h3{
+    margin:1.5rem;
+}
+}
+.img{
+    margin-left: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .maincon {
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+    }
+  
+    .profile {
+      width: 90vw;
+      height: 50vh;
+      margin-bottom: 2rem;
+      margin-right: 8px;
+    }
+  
+    .logo {
+      width: 40%;
+      height: auto;
+      margin: 1rem;
+    }
+  
+    .write {
+      width: 40px;
+      height: 40px;
+      margin-left: 6.3rem;
+      margin-bottom: 1rem;
+      & a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  
+    .heading {
+      width: 90vw;
+      height: auto;
+      margin: 0;
+      padding: 1rem;
+      margin-left:5px;
+    }
+  
+    .total {
+      margin: 1rem;
+    }
+  
+    .cat {
+      flex-direction: column;
+      align-items: center;
+      margin:1rem;
+    }
+  
+    .listcat {
+      align-items: center;
+      margin-bottom: 1rem;
+      /* margin-right: 7px; */
+    }
+    
+    .innerlist {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 80vw;
+      height: auto;
+      margin: 1rem;
+    }
+  
+    .img {
+      margin-left: 0;
+    }
+  }
+  

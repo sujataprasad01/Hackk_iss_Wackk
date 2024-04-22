@@ -1,20 +1,19 @@
 
-/* Style for the container */
 .container {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
     padding: 20px;
-    background-color: #b66fe6;
+    background-color: rgb(134, 206, 236);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Add transition for hover effect */
+    align-items: start;
+    transition: transform 0.3s ease; 
   }
   
   .container:hover {
-    transform: translateY(-5px); /* Add hover effect */
+    transform: translateY(-5px); 
   }
   
-  /* Style for headings */
   h2 {
     margin-top: 0;
     margin-bottom: 20px;
@@ -22,7 +21,6 @@
     color: #333;
   }
   
-  /* Style for form inputs */
   .input-wrapper {
     margin-bottom: 15px;
   }
@@ -36,14 +34,13 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s ease; /* Add transition for input focus */
+    transition: border-color 0.3s ease; 
   }
   
   input:focus {
-    border-color: #007bff; /* Change border color on focus */
+    border-color: #007bff; 
   }
   
-  /* Style for submit button */
   .add-button {
     padding: 10px;
     background-color: #007bff;
@@ -51,21 +48,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    transition: background-color 0.3s ease; 
   }
   
   .add-button:hover {
     background-color: #0056b3;
   }
   
-  /* Style for course grid */
   .course-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
   
-  /* Style for each course */
   .course {
     background-color: #fff;
     padding: 15px;
@@ -80,3 +75,30 @@
   .course-details {
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 90%;
+      margin: 0 auto 30px auto;
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  
+    input {
+      padding: 8px;
+    }
+  
+    .add-button {
+      padding: 8px;
+    }
+  
+    .course-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+  }
+  

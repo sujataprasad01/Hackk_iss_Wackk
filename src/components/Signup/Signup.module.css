@@ -2,7 +2,7 @@
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #9900ff, #cc80ff);
+    background-color: #0460b6f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@
   .footer button {
     outline: none;
     border: none;
-    background-color: #9900ff;
+    background-color: #0460b6f0;
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
@@ -58,7 +58,7 @@
   }
   
   .footer button:hover {
-    background-color: #aa2aff;
+    background-color: #0460b6f0;
   }
   
   .footer p {
@@ -68,8 +68,31 @@
   
   .footer p span a {
     font-weight: bold;
-    color: #9900ff;
+    color:  #0460b6f0;
     letter-spacing: 1px;
     font-size: 1rem;
     text-decoration: none;
   }
+
+  @media screen and (max-width: 768px) {
+    .innerBox {
+      min-width: unset;
+      width: 80%;
+      padding: 20px;
+    }
+  
+    .footer {
+      gap: 10px;
+    }
+  
+    .twosignup {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer button {
+      padding: 10px 12px;
+      margin: 2px;
+    }
+  }
+  

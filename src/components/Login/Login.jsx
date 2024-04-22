@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+// import { signInWithGoogle } from '../../firebase';
 import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase";
 
@@ -35,6 +35,15 @@ function Login() {
         setErrorMsg(err.message);
       });
   };
+
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     await signInWithGoogle(); // Call the function to initiate Google Sign-In
+  //   } catch (error) {
+  //     console.error('Google Sign-In Error:', error);
+  //   }
+  // };
+
   return (
     <div className={styles.container}>
       <div className={styles.innerBox}>
@@ -59,11 +68,11 @@ function Login() {
           <b className={styles.error}>{errorMsg}</b>
           <div className={styles.twologin}>
           <button disabled={submitButtonDisabled} onClick={handleSubmission}>
-            Login As Student
+            Login
           </button>
-          <button disabled={submitButtonDisabled} onClick={handleSubmission}>
-            Login As Teacher
-          </button>
+          {/* <button disabled={submitButtonDisabled} onClick={handleGoogleSignIn}>
+            Continue with Google
+          </button> */}
           </div>
           <p>
             Already have an account?{" "}

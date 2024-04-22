@@ -71,10 +71,7 @@ function Signup() {
           <b className={styles.error}>{errorMsg}</b>
           <div className={styles.twosignup}>
           <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-            Signup As Student
-          </button>
-          <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-            Signup As Teacher
+            Signup
           </button>
           </div>
           <p>

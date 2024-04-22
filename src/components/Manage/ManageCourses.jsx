@@ -1,82 +1,150 @@
 import React, { useState } from 'react';
-// import './AddCoursePage.css'; // Import CSS file
-import './Manage.css'
-const AddCoursePage = () => {
-  const [courseName, setCourseName] = useState('');
-  const [instructor, setInstructor] = useState('');
-  const [duration, setDuration] = useState('');
-  const [courses, setCourses] = useState([]);
+import './Manage.css';
+
+const AddCoursePage = ({ onProjectSubmit, setSoftwareCount, softwareCount, setHardwareCount, hardwareCount, collegeCount, learningCount }) => {
+  const [projectName, setProjectName] = useState('');
+  const [projectType, setProjectType] = useState('');
+  const [collegeName, setCollegeName] = useState('');
+  const [studentName, setStudentName] = useState('');
+  const [description, setDescription] = useState('');
+  const [codeFile, setCodeFile] = useState(null);
+  const [coverImage, setCoverImage] = useState(null);
+  const [projectVideo, setProjectVideo] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent form submission
 
-    // Create new course object
-    const newCourse = {
+    // Create new project object
+    const newProject = {
       id: Math.random(), // Generate unique ID (for demonstration)
-      courseName,
-      instructor,
-      duration,
+      projectName,
+      projectType,
+      collegeName,
+      studentName,
+      description,
+      codeFile,
+      coverImage,
+      projectVideo,
     };
 
-    // Add new course to courses list
-    setCourses([...courses, newCourse]);
+    onProjectSubmit(newProject);
+
+    if (projectType === 'software') {
+      setSoftwareCount(softwareCount + 1);
+    } else if (projectType === 'hardware') {
+      setHardwareCount(hardwareCount + 1);
+    }
+    // else if (projectType === 'college') {
+    //   collegeCount(hardwareCount + 1);
+    // }
+    // else if (projectType === 'learning') {
+    //   learningCount(hardwareCount + 1);
+    // }
+
 
     // Reset form fields
-    setCourseName('');
-    setInstructor('');
-    setDuration('');
+    setProjectName('');
+    setProjectType('');
+    setCollegeName('');
+    setStudentName('');
+    setDescription('');
+    setCodeFile(null);
+    setCoverImage(null);
+    setProjectVideo(null);
   };
 
-  return (
-    <div className="container">
-      <h2>Add New Course</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-wrapper">
-          <label htmlFor="courseName">Course Name:</label>
-          <input
-            type="text"
-            id="courseName"
-            value={courseName}
-            onChange={(e) => setCourseName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-wrapper">
-          <label htmlFor="instructor">Instructor:</label>
-          <input
-            type="text"
-            id="instructor"
-            value={instructor}
-            onChange={(e) => setInstructor(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-wrapper">
-          <label htmlFor="duration">Duration:</label>
-          <input
-            type="text"
-            id="duration"
-            value={duration}
-            onChange={(e) => setDuration(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className="add-button">Add Course</button>
-      </form>
 
+  return (
+    <>
+      {/* <Navbar /> */}
       <div className="container">
-        <h2>Manage Courses</h2>
-        <div id="coursesList" className="course-grid">
-          {courses.map(course => (
-            <div key={course.id} className="course">
-              <h2 className="course-title">{course.courseName}</h2>
-              <p className="course-details">Instructor: {course.instructor}</p>
-              <p className="course-details">Duration: {course.duration}</p>
-            </div>
-          ))}
-        </div>
+        <h2>Add New Project</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <label htmlFor="projectName">Project Name:</label>
+            <input
+              type="text"
+              id="projectName"
+              value={projectName}
+              onChange={(e) => setProjectName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="projectType">Project Type:</label>
+            <select
+              id="projectType"
+              value={projectType}
+              onChange={(e) => setProjectType(e.target.value)}
+              required
+            >
+              <option value="">Select Project Type</option>
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+              <option value="college">College</option>
+              <option value="learning">Learning</option>
+            </select>
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="collegeName">College Name:</label>
+            <input
+              type="text"
+              id="collegeName"
+              value={collegeName}
+              onChange={(e) => setCollegeName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="studentName">Student Name:</label>
+            <input
+              type="text"
+              id="studentName"
+              value={studentName}
+              onChange={(e) => setStudentName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              id="description"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+            ></textarea>
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="codeFile">Code Upload:</label>
+            <input
+              type="file"
+              id="codeFile"
+              onChange={(e) => setCodeFile(e.target.files[0])}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="coverImage">Cover Image:</label>
+            <input
+              type="file"
+              id="coverImage"
+              onChange={(e) => setCoverImage(e.target.files[0])}
+              required
+            />
+          </div>
+          {/* <div className="input-wrapper">
+            <label htmlFor="projectVideo">Project Video:</label>
+            <input
+              type="file"
+              id="projectVideo"
+              onChange={(e) => setProjectVideo(e.target.files[0])}
+              required
+            />
+          </div> */}
+          <button type="submit" className="add-button">Submit</button>
+        </form>
       </div>
-    </div>
+    </>
   );
 };
 

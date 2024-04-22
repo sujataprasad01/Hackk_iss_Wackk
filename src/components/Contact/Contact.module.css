@@ -1,39 +1,75 @@
-/* ContactPage.module.css */
-
+.outer{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
 .container {
-    margin: 20px;
-    max-width: 400px; /* Set a maximum width for the container */
-    margin: auto; /* Center the container horizontally */
+  width: 50%;
+  margin:1rem;
+  text-align: center;
+  padding: 2rem; 
+  background-color: rgb(134, 206, 236);
+  border-radius: 10px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+@media screen and (max-width: 768px) {
+  .outer {
+    flex-direction: column;
   }
-  
-  .formGroup {
-    margin-bottom: 20px;
+
+  .container {
+    width: 90%;
+    margin: 1rem auto;
   }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
+
+  .formGroup label {
+    font-size: 1rem;
   }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 1rem;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+}

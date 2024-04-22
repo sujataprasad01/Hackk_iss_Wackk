@@ -1,45 +1,45 @@
-/* StudentDashboard.css */
 
-/* Style for the container */
 .dashboardcontainer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+    /* padding: 20px; */
   }
   
-  /* Style for course list */
   .courselist {
-    display: flex; /* Display courses in a row */
-    flex-wrap: wrap; /* Allow courses to wrap to the next line */
-    justify-content: space-between; /* Distribute space between courses */
-    margin-top: 20px; /* Add margin at the top */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-top: 20px; 
+    width: 60rem;
+
+    & button{
+      margin: 5px;
+    }
   }
   
-  /* Style for course card */
   .coursecard {
-    width: calc(33.33% - 20px); /* Set width for each course card */
-    margin-bottom: 20px; /* Add margin between cards */
-    background-color: #a250e4; /* Dark background color */
-    color: #fff; /* Text color */
+    /* width: calc(33.33% - 20px);  */
+    margin-bottom: 20px;
+    background-color: rgb(134, 206, 236);
+    /* Dark background color */
+    color:black; /* Text color */
     padding: 20px;
     font-size: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style for course title */
   .course-card h3 {
     margin-top: 0;
   }
   
-  /* Style for course description */
   .course-card p {
     margin-bottom: 10px;
   }
   
-  /* Style for button */
-  .course-card button {
-    background-color: #007bff;
+  .coursecard button {
+    background-color: black;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -47,7 +47,97 @@
     cursor: pointer;
   }
   
-  /* Hover style for button */
-  .course-card button:hover {
+  .coursecard button:hover {
     background-color: #0056b3;
+    color: white;
   }
+.leftimg{
+  & h1{
+    margin-right: 40rem;
+  }
+}
+.exam{
+   margin-top: 6rem;
+  width: 40vw;
+  height: 50vh;
+    /* width: 60vw; */
+    /* height: 100vh; */
+  }
+  .rightcontent{
+    margin-bottom: 20px;
+    width: 100vw;
+    /* height: 100vh; */
+display: flex;
+flex-direction: row;
+  }
+.recent{
+  justify-content: start;
+  margin: 0;
+  /* margin-right: 70rem; */
+}
+.count{
+  margin:1.3rem 2rem;
+}
+  .maindiv{
+    margin-top: 2rem;
+    width: 90vw;
+    margin-left: 4rem;
+
+    & h2{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .dashboardcontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .courselist {
+      width: 90%;
+   margin-left: 1rem;
+    }
+  
+    .coursecard {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .leftimg {
+      text-align: center;
+      margin-right: 0;
+
+      & h1{
+        margin-right:20px;
+      }
+    }
+  
+    .exam {
+      margin-top: 2rem;
+      width: 40%;
+      height: auto;
+    }
+    .rightcontent {
+      flex-direction: column;
+    }
+  
+    .recent {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  .form{
+    margin-left: 2rem;
+  }
+    .count {
+      margin: 1rem 1rem 0 2.3rem;
+      text-align: center;
+    }
+    .maindiv {
+      margin: 1rem 0;
+      width: 90%;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  
